@@ -22,17 +22,14 @@ $(function() {
          * page?
          */
 
-         // Test to ensures that the allFeeds variable is defined and not empty
+         // This test shows that allFeeds variable are defined and not empty
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
-         */
+        //This test show that each feed in allFeeds has a url and that it is not empty
         it("URL defined", function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.url).toBeDefined();
@@ -40,10 +37,7 @@ $(function() {
             });
         });
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
+        //This test shows that each feed in allFeeds is named and is not empty
         it("Name defined", function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.name).toBeDefined();
@@ -53,22 +47,15 @@ $(function() {
     });
 
 
-      /* TODO: Write a new test suite named "The menu" */
+      //new test suite named "The menu"
     describe("The menu", function() {
 
-      /* TODO: Write a test that ensures the menu element is
-       * hidden by default. You'll have to analyze the HTML and
-       * hiding/showing of the menu element.
-       */
+      //This test makes the menu hidden by default
         it("the menu element hidden by default", function() {
             expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
 
-        /* TODO: Write a test that ensures the menu changes
-         * visibility when the menu icon is clicked. This test
-         * should have two expectations: does the menu display when
-         * clicked and does it hide when clicked again.
-         */
+        //This test makes the menu appear and hide
         it('the menu changes visibility', function() {
          // Triggers event menu
             $('.menu-icon-link').trigger('click');
@@ -80,37 +67,28 @@ $(function() {
         });
     });
 
-    /* TODO: Write a new test suite named "Initial Entries" */
+    //new test suite named "Initial Entries"
     describe("Initial Entries", function() {
 
-      /* TODO: Write a test that ensures when the loadFeed
-       * function is called and completes its work, there is at least
-       * a single .entry element within the .feed container.
-       * Remember, loadFeed() is asynchronous so this test will require
-       * the use of Jasmine's beforeEach and asynchronous done() function.
-       */
-
+      //This test calls loadFeed() for "Initial Entries"
         beforeEach(function(done) {
             loadFeed(0, done);
         });
 
-       // Test to ensure there is at least a single .entry element within the .feed container.
+       // Test that shows there is a .entry element within the .feed container.
         it('has been completed', function(done) {
-            expect($('.feed').children().length).toBeGreaterThan(0);
+            expect($('.entry').children().length).toBeGreaterThan(0);
             done();
         });
     });
 
 
-      /* TODO: Write a new test suite named "New Feed Selection" */
+      //new test suite named "New Feed Selection"
     describe("New Feed Selection", function(){
-        const current;
-        const after;
+        var current;
+        var after;
 
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
-         */
+        //Test that makes beforeEach waits for a sync to finish
         beforeEach(function(done) {
             //Loads the first feed
             loadFeed(0 ,function() {
@@ -125,7 +103,7 @@ $(function() {
             });
         });
 
-        //Test thats ensures content is different
+        //Test that makes sure content is different
         it('changes content' , function(done) {
             expect(current != after).toBe(true);
             done();

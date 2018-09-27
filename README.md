@@ -1,3 +1,15 @@
+
+# Feed Reader
+
+## Table of Contents
+
+* [Project Overview](#project-overview)
+* [Why this Project?](#Why-this-Project?)
+* [What will I learn?](#What-will-I-learn?)
+* [How will this help my career?](#How-will-this-help-my-career?)
+* [How will I complete this project?](#How-will-I-complete-this-project?)
+* [## How to Access Project](#How-to-Access-Project)
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
@@ -44,5 +56,10 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 17. No test should be dependent on the results of another.
 18. Callbacks should be used to ensure that feeds are loaded before they are tested.
 19. Implement error handling for undefined variables and out-of-bound array access.
-20. When complete - all of your tests should pass. 
+20. When complete - all of your tests should pass.
 21. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
+
+## How to Access Project
+
+Clone the repository and open the index.html file in your browser
+Alternatively, download the project as a zip file, unzip the folder and open the index.html file in your browser
