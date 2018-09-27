@@ -77,7 +77,7 @@ $(function() {
 
        // Test that shows there is a .entry element within the .feed container.
         it('has been completed', function(done) {
-            expect($('.entry').children().length).toBeGreaterThan(0);
+            expect($('.feed .entry').children().length).toBeGreaterThan(0);
             done();
         });
     });
